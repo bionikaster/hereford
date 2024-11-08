@@ -12,13 +12,19 @@
         h1.big {
             font-size:60px;
         }
-        blockquote.geor {
+        .geor {
             font-family:Georgia,Helvetica,sans-serif;
+        }
+        p.date {
+            font-size:50px;
+            font-family:'Times New Roman',serif;
         }
     </style>
     <link href="hereford_logo_temp.png" rel="shortcut icon">
 </head>
 <body onload="firstFunc()">
+    <h3>Right now, it is:</h3>
+    <p class="date" id="date" onload="dateFunc()"></p>
     <h1 class="big"><b>Welcome to the Hereford House!</b></h1>
     <img src="hereford_logo_temp.png" alt="The Hereford House Logo (for now)">
     <p>This is a website completely managed by Jarvis, and will have more updates as time progresses. For now, there isn't much.</p>
@@ -35,6 +41,10 @@
 <script>
     function firstFunc() {
         alert("THIS PAGE IS STILL IN DEVELOPMENT.");
+    }
+    function dateFunc() {
+        let curDate = new Date();
+        document.getElementById("date").innerHTML = curDate;
     }
 </script>
 </html>
